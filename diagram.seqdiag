@@ -1,0 +1,41 @@
+Participant Main
+Participant Plan
+Participant Field
+Participant Seeds
+Participant Tractor
+Participant Harvester
+Participant Catalog
+
+
+Main -> Plan: invoke plan\nto get plans
+
+Note over Plan:Loops over crops to\n return row plans
+
+Plan --> Main: returns plan
+
+Main -> Tractor: invoke plantSeeds with plan as argument
+
+Note left of Tractor:START LOOP\nLoop over returned plans\n to find seeds\n that match
+Tractor -> Seeds: call matched seed functions
+
+Seeds --> Tractor: returns seeds that match
+
+Tractor -> Field: call addPlant with each returned seed
+
+Note left of Tractor: END LOOP
+
+Main -> Field: call Use plants\n to get copy of array\n store in variable
+Field --> Main: give copy of array
+
+Main -> Harvester: call havestPlants with the usePlants copy
+
+Note left of Harvester:LOOP START\n gets value of output property\n adds them X amount of output to an array and returns them\n except for corn which takes half
+
+Note left of Harvester: LOOP END
+Harvester --> Main: returns an array of the Harvester
+
+Main -> Catalog: call catalog function with array of Harvester
+
+Note left of Catalog:LOOP START\n Add HTML Representation\n for each object\n in the array. Then\n add them to the <main> element
+
+Note left of Catalog:LOOP END
