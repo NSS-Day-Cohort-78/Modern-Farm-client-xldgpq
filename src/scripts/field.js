@@ -16,7 +16,6 @@ export const addPlant = (seed) => {
     }
 }
 
-
 // export and define usePlants that returns copy of array above (field array)
 export const usePlants = () => {
     // return a copy of the array

@@ -16,9 +16,9 @@ export const plantSeeds = (yearlyPlan) => {
         // make 6 if/else statements to compare array item to word ie is potato
            if (seed === 'Soybean') {
                // call function ie createPotato
-               const createdPotato = createPotato()
+               const createdSoybean = createSoybean()
                // push seed into field array 
-               addPlant(createdPotato)
+               addPlant(createdSoybean)
             } 
             else if (seed === 'Corn') {
                 // call function ie createPotato
@@ -32,7 +32,7 @@ export const plantSeeds = (yearlyPlan) => {
                 // push seed into field array 
                 addPlant(createdAsparagus)
             }
-            else if (seed === ' Wheat') {
+            else if (seed === 'Wheat') {
                 // call function ie createPotato
                 const createdWheat = createWheat()
                 // push seed into field array 
