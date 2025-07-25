@@ -15,7 +15,7 @@ Plan --> Main: returns plan
 
 Main -> Tractor: invoke plantSeeds with plan as argument
 
-Note left of Tractor:START LOOP\nLoop over returned plans\n to find seeds\n that match
+Note over Seeds,Tractor:START LOOP\n--Loop over returned plans\n--to find seeds hat match
 Tractor -> Seeds: call matched seed functions
 
 Seeds --> Tractor: returns seeds that match

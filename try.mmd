@@ -1,0 +1,49 @@
+
+sequenceDiagram
+Main ->> Plan: invoke plan<br/>to get plans
+
+loop loop over crops
+
+Note over Plan: pushes random crop to the array
+
+end
+
+
+Plan -->> Main: returns plan
+
+Main ->> Tractor: invoke plantSeeds with plan as argument
+
+loop
+
+Tractor ->> Seeds: call matched seed functions
+
+Seeds -->> Tractor: returns seeds that match
+
+Tractor ->> Field: call addPlant with each returned seed
+
+    loop
+
+    Note over Seeds,Tractor:Loop over returned plans<br/> to find seeds hat match
+
+    end
+
+end
+
+
+Main ->> Field: call Use plants<br/> to get copy of array\n store in variable
+Field -->> Main: give copy of array
+
+Main ->> Harvester: call harvestPlants with the usePlants copy
+loop
+Note over Harvester: gets value of output property<br/> adds them X amount of output<br/>to an array and returns them<br/> except for corn which takes half
+end
+
+Harvester -->> Main: returns an array of the Harvester
+
+Main ->> Catalog: call catalog function with array of Harvester
+
+loop
+
+Note over Harvester: Add HTML Representation for each object<br/>in the array. Then add them to the <main> element
+
+end
