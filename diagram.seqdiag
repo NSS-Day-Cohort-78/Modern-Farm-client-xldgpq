@@ -13,6 +13,8 @@ Note over Plan:Loops over crops to\n return row plans
 
 Plan --> Main: returns plan
 
+
+
 Main -> Tractor: invoke plantSeeds with plan as argument
 
 Note over Seeds,Tractor:START LOOP\n--Loop over returned plans\n--to find seeds hat match
