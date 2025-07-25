@@ -16,7 +16,4 @@ const harvestedPlants = harvestPlants(usedPlants)
 
 Catalog(harvestedPlants)
 
-console.log(harvestedPlants)
-console.log('hello')
-
 // SOWING THE FIELD WITH THE TRACTOR
